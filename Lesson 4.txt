@@ -1,0 +1,69 @@
+for(let i=0; i< quizz.questions[0].answers.length; i++)
+
+-> quizz.questions[0].answers.length
+	-> Donc il va se baser sur la longueur de la 
+	   liste de réponses présentes dans la question 1
+
+
+-> quizz.questions.length
+	-> De la longueur des nombres de questions ici.
+
+Il y a des fonts disponibles dans le dossier. 
+Page 80 pour aider
+
+---
+
+// Fonction pour une font!!!
+
+function loadFont(name, url) { 
+    var newFont = new FontFace(name, `url(${url})`); 
+    newFont.load().then(function (loaded) { 
+    document.fonts.add(loaded); 
+    }).catch(function (error) { 
+    return error; 
+    }); 
+} 
+
+
+Ensuite:
+
+    /!\ Il faut les mettre dans le Preload pour qu'il charge.
+
+	loadFont("carterone", "./assets/Fonts/CarterOne.ttf");
+
+
+Favorisé de travailler en mode incognito
+
+------
+
+Frogger 
+
+What do we do first?
+
+1.Background
+2.les éléments graphiques (comme les voitures, la grenouille et sa mère)
+3.Mouvoir la grenouille dans les directions voulus
+4.Réorienter le sprite selon la direction
+5.Ajouter du saut après chaque saut.
+6.Si elle retrouve sa mère donc gérer la collision
+7.Activer le coeur
+8.VOITURE ANTAGONISTE!!!
+
+---
+
+Le random dans Phaser 
+
+Phaser.Math.Between(min ex:0, max ex:460)
+
+---
+
+Pour l'étape 3, il faudra utiliser la fonction update qui se recharge
+en 60 frames/s.
+
+---
+if(Phaser.Input.Keyboard.JustDown(down))
+
+JustDown -> touche enfoncé!
+down -> flèche vers le bas!
+---
+
